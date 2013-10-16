@@ -53,9 +53,9 @@ end
 #   rand(60..90)
 # end
 
-# def get_airport_delay(city_name)
-#   return rand(0..60)
-# end
+def get_airport_delay(city_name)
+  return rand(0..60)
+end
 
 puts start_of_page
 
