@@ -1,0 +1,37 @@
+Google Geocoding API
+--------------------
+
+Your URL must look like this:
+
+http://maps.googleapis.com/maps/api/geocode/json?address=Merchandise%20Mart,Chicago,IL&sensor=false
+
+
+Remember that any spaces or punctuation must be "encoded":
+
+URI.encode("Hello there")     # => "Hello%20there"
+
+
+Forecast API
+-----------------
+
+https://api.forecast.io/forecast/APIKEY/LATITUDE,LONGITUDE
+
+Jeff's API key: 73caa31d569071a7ef1621e4bc146456
+
+Example: For the Merchandise Mart,
+LATITUDE is 41.8885694
+LONGITUDE is -87.63552779999999
+
+So the full url would be:
+
+https://api.forecast.io/forecast/73caa31d569071a7ef1621e4bc146456/41.8885694,-87.63552779999999
+
+More info: https://developer.forecast.io/docs/v2
+
+
+Airport Status API
+--------------------
+http://services.faa.gov/docs/services/airport/
+
+Check out the map at http://www.fly.faa.gov/flyfaa/usmap.jsp
+

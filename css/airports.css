@@ -1,0 +1,27 @@
+h2 { font-size: 48px; }
+
+.chart {
+  border-radius: 40px;
+}
+
+.temperature {
+  font-size: 36px;
+}
+
+.airport {
+  font-size: 96px;
+  text-align: center;
+}
+
+.on-time {
+  color: green;
+}
+
+.delayed {
+  color: orange;
+}
+
+.nightmare {
+  color: red;
+}
+
