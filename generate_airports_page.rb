@@ -26,15 +26,13 @@ def end_of_page
 end
 
 
-def html_for_airport(airport_name)
-  current_delay = get_airport_delay(airport_name.upcase)
+def html_for_airport(airport)
+  current_delay = airport.delay
 
   html = '<div class="col-md-3 chart well">'
-  html << "<h2>#{airport_name}</h2>"
+  html << "<h2>#{airport.code}</h2>"
 
-  coordinates = get_coordinates(airport_name)
-  current_temp = get_current_temperature(coordinates.first, coordinates.last)
-  html << '<p class="text-muted temperature">' + current_temp.to_s + '&deg; F</p>'
+  html << '<p class="text-muted temperature">' + airport.temperature.to_s + '&deg; F</p>'
 
   if current_delay < 15
     airport_class = 'on-time'
