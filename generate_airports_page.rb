@@ -1,6 +1,4 @@
-require './airports_api'
-require './weather_api'
-
+require './airport'
 
 def start_of_page
   html = '<!DOCTYPE html>
@@ -47,25 +45,14 @@ def html_for_airport(airport)
   return html
 end
 
-# def get_current_temperature(lat, lng)
-#   rand(60..90)
-# end
 
-def get_airport_delay(city_name)
-  return rand(0..60)
-end
 
 puts start_of_page
 
-# WARMUP CHALLENGE: Can you change the code below to use
-# this array of airport codes?
-# airports = ["ORD", "LAX", "BOX", "MDW", "PDX", "AUS"]
-
-puts html_for_airport("ORD")
-puts html_for_airport("LAX")
-puts html_for_airport("BOS")
-puts html_for_airport("MDW")
-puts html_for_airport("PDX")
-puts html_for_airport("AUS")
+['ORD', 'LAX', 'BOS', 'MDW', 'PDX', 'AUS'].each do |airport_code|
+  airport = Airport.new
+  airport.code = airport_code
+  puts html_for_airport(airport)
+end
 
 puts end_of_page

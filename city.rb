@@ -1,3 +1,5 @@
+require './weather_api'
+
 class City
 
   def temperature
